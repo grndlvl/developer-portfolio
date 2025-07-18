@@ -3,7 +3,9 @@
 import { skillsData } from "@/utils/data/skills";
 import { skillsImage } from "@/utils/skill-image";
 import Image from "next/image";
+import React from "react";
 import Marquee from "react-fast-marquee";
+
 
 function Skills() {
   return (
@@ -55,7 +57,7 @@ function Skills() {
                       className="h-full w-auto rounded-lg"
                     />
                   </div>
-                  <p className="text-white text-sm sm:text-lg">
+                  <p className="text-white whitespace-nowrap text-sm sm:text-lg">
                     {skill}
                   </p>
                 </div>

@@ -24,6 +24,14 @@ import firebase from '../app/assets/svg/skills/firebase.svg';
 import flutter from '../app/assets/svg/skills/flutter.svg';
 import gcp from '../app/assets/svg/skills/gcp.svg';
 import gimp from '../app/assets/svg/skills/gimp.svg';
+import bash from '../app/assets/svg/skills/bash.svg';
+import circleci from '../app/assets/svg/skills/circleci.svg';
+import pantheon from '../app/assets/svg/skills/pantheon.svg';
+import openai from '../app/assets/svg/skills/openai.svg';
+import jira from '../app/assets/svg/skills/jira.svg';
+import akamai from '../app/assets/svg/skills/akamai.svg';
+import digitalocean from '../app/assets/svg/skills/digitalocean.svg';
+import githubActions from '../app/assets/svg/skills/githubactions.svg';
 import git from '../app/assets/svg/skills/git.svg';
 import go from '../app/assets/svg/skills/go.svg';
 import graphql from '../app/assets/svg/skills/graphql.svg';
@@ -174,6 +182,24 @@ export const skillsImage = (skill) => {
       return adobeaudition;
     case 'aws':
       return aws;
+    case 'github actions':
+      return githubActions;
+    case 'circleci':
+      return circleci;
+    case 'bash':
+      return bash;
+    case 'google cloud':
+      return gcp;
+    case 'pantheon':
+      return pantheon;
+    case 'openai':
+      return openai;
+    case 'akamai':
+      return akamai;
+    case 'digital ocean':
+      return digitalocean;
+    case 'jira':
+      return jira;
     case 'deno':
       return deno;
     case 'django':

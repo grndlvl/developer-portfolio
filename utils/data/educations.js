@@ -1,20 +1,14 @@
 export const educations = [
   {
     id: 1,
-    title: "Bachelor Degree",
-    duration: "2020 - Present",
-    institution: "National University of Bangladesh",
+    title: 'Bachelor of Science in Computer Science, Certificate in Cyber Defender; GPA: Cum Laude',
+    duration: 'Aug 2007 -- May 2018',
+    institution: 'Augusta University',
   },
   {
     id: 2,
-    title: "Higher Secondary Certificate",
-    duration: "2018 - 2020",
-    institution: "Noakhali Islamia Kamil Madrasah",
+    title: 'Associate of Applied Science in Computer Programming',
+    duration: 'Aug 2004 -- May 2007',
+    institution: 'Augusta Technical College',
   },
-  {
-    id: 3,
-    title: "Secondary School Certificate",
-    duration: "2008 - 2018",
-    institution: "Baitus Saif Islamia Madrasah",
-  }
-]
+];

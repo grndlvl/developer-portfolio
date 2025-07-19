@@ -1,6 +1,6 @@
 {
   "name": "developer-portfolio",
-  "description": "Portfolio of Abu Said",
+  "description": "Portfolio of Jonathan DeLaigle",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -30,6 +30,6 @@
     "eslint-config-next": "15.1.1",
     "postcss": "latest",
     "sass": "^1.69.5",
-    "tailwindcss": "latest"
+    "tailwindcss": "^3"
   }
 }

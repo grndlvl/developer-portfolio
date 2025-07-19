@@ -8,6 +8,8 @@ import { MdAlternateEmail } from "react-icons/md";
 import ContactForm from './contact-form';
 
 function ContactSection() {
+  const cleanPhoneNumber = personalData.phone.replace(/[^\d+]/g, '');
+
   return (
     <div id="contact" className="my-12 lg:my-16 relative mt-24 text-white">
       <div className="hidden lg:flex flex-col items-center absolute top-24 -right-8">
@@ -25,16 +27,14 @@ function ContactSection() {
                 className="bg-[#8b98a5] p-2 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
                 size={36}
               />
-              <span>{personalData.email}</span>
+              <span><a href={`mailto:${personalData.email}`}>{personalData.email}</a></span>
             </p>
             <p className="text-sm md:text-xl flex items-center gap-3">
               <IoMdCall
                 className="bg-[#8b98a5] p-2 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
                 size={36}
               />
-              <span>
-                {personalData.phone}
-              </span>
+              <span><a href={`tel:${cleanPhoneNumber}`}>{personalData.phone}</a></span>
             </p>
           </div>
           <div className="mt-8 lg:mt-16 flex items-center gap-5 lg:gap-10">

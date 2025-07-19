@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Portfolio of Jonathan DeLaigle - Software Developer",
   description:
-    "This is the portfolio of Jonathan DeLaigle. I am a full stack developer. I love to learn new technologies and collaborate. Here's my resume: https://www.grndlvl.com/JonathanDeLaigle.pdf",
+    "Jonathan DeLaigle – CTO and software engineer specializing in scalable systems, AI-driven development, DevOps, and full-stack delivery. Trusted by CHOP, Merck, LSAC, and Johns Hopkins.",
 };
 
 export default function RootLayout({ children }) {

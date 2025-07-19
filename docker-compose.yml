@@ -11,7 +11,7 @@ services:
       - /app/node_modules
       - /app/.next
     ports:
-      - "3000:3000"
+      - "3000"
     env_file:
       - .env
 
@@ -21,7 +21,7 @@ services:
       dockerfile: Dockerfile.prod
     container_name: demo-nextjs
     ports:
-      - "3005:3000"
+      - "3000"
     env_file:
       - .env
 

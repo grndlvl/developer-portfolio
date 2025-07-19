@@ -23,4 +23,13 @@ module.exports = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/JonathanDeLaigle.pdf',
+        destination: 'https://drive.google.com/file/d/1sEKV7Mi1JuPDUGbmkH5AIfCFLheq66e3/view?usp=sharing',
+        permanent: false,
+      },
+    ]
+  }
 }

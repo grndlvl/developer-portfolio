@@ -9,5 +9,5 @@ export const personalData = {
   linkedIn: 'https://www.linkedin.com/in/delaigle',
   drupal: 'https://www.drupal.org/u/grndlvl',
   devUsername: "grndlvl",
-  resume: "https://drive.google.com/file/d/1sEKV7Mi1JuPDUGbmkH5AIfCFLheq66e3/view?usp=sharing"
+  resume: "/JonathanDeLaigle.pdf"
 }

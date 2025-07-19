@@ -10,7 +10,7 @@ import "./css/globals.scss";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Portfolio of Jonathan DeLaigle - Software Developer",
+  title: "Jonathan DeLaigle – CTO & Software Engineer",
   description:
     "Jonathan DeLaigle – CTO and software engineer specializing in scalable systems, AI-driven development, DevOps, and full-stack delivery. Trusted by CHOP, Merck, LSAC, and Johns Hopkins.",
 };

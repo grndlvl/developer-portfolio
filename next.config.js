@@ -27,7 +27,7 @@ module.exports = {
     return [
       {
         source: '/JonathanDeLaigle.pdf',
-        destination: 'https://drive.google.com/file/d/1sEKV7Mi1JuPDUGbmkH5AIfCFLheq66e3/view?usp=sharing',
+        destination: 'https://mozilla.github.io/pdf.js/web/viewer.html?file=https://raw.githubusercontent.com/grndlvl/resume/master/jonathan_delaigle.pdf',
         permanent: false,
       },
     ]

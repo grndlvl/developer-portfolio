@@ -36,7 +36,7 @@ function AboutSection() {
                 className="object-cover grayscale hover:grayscale-0 hover:scale-110 transition-all duration-1000 cursor-pointer"
               />
             </div>
-            {personalData.openForWork && <Link href="#contact" scroll={true}>
+            {personalData.openForWork && <Link href="#contact">
               <span className="text-xs font-medium px-3 py-1 rounded-full bg-[#16f2b3]/10 text-[#16f2b3] border border-[#16f2b3] hover:bg-[#16f2b3]/20 hover:shadow-md transition-all duration-300 animate-pulse hover:animate-none">
                 {personalData.openForWorkTitle}
               </span>

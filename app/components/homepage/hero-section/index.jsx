@@ -10,6 +10,7 @@ import { FaFacebook, FaTwitterSquare } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
 import { RiContactsFill } from "react-icons/ri";
 import { SiLeetcode } from "react-icons/si";
+import { toCamelCase } from "@/utils/stringUtils";
 
 function HeroSection() {
   const cleanedDesignation = personalData.designation.replace('&', '</span> & <span class="text-[#16f2b3]">');
@@ -114,7 +115,7 @@ function HeroSection() {
               <div>
                 <span className="ml-4 lg:ml-8 mr-2 text-white">name:</span>
                 <span className="text-gray-400">{`'`}</span>
-                <span className="text-amber-300">Jonathan DeLaigle</span>
+                <span className="text-amber-300">{personalData.name}</span>
                 <span className="text-gray-400">{`',`}</span>
               </div>
               <div className="ml-4 lg:ml-8 mr-2">
@@ -156,7 +157,7 @@ function HeroSection() {
                 <span className="text-gray-400">,</span>
               </div>
               <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-green-400">hireable:</span>
+                <span className="ml-4 lg:ml-8 mr-2 text-green-400">{toCamelCase(personalData.openForWorkTitle)}:</span>
                 <span className="text-orange-400">function</span>
                 <span className="text-gray-400">{'() {'}</span>
               </div>

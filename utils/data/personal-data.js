@@ -12,5 +12,6 @@ export const personalData = {
   linkedIn: 'https://www.linkedin.com/in/delaigle',
   drupal: 'https://www.drupal.org/u/grndlvl',
   devUsername: "grndlvl",
-  resume: "/JonathanDeLaigle.pdf"
+  resume: "/JonathanDeLaigle.pdf",
+  fiverr: "https://www.fiverr.com/jdelaigle"
 }

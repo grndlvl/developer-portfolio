@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Typewriter from 'typewriter-effect';
 import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { SiFiverr } from "react-icons/si";
 import { SiDrupal } from "react-icons/si";
 import { FaFacebook, FaTwitterSquare } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
@@ -73,6 +74,13 @@ function HeroSection() {
               className="transition-all text-pink-500 hover:scale-125 duration-300"
             >
               <SiDrupal size={30} />
+            </Link>
+            <Link
+              href={personalData.fiverr}
+              target='_blank'
+              className="transition-all text-pink-500 hover:scale-125 duration-300"
+            >
+              <SiFiverr size={30} />
             </Link>
           </div>
 

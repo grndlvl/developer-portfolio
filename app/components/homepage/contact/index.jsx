@@ -5,8 +5,8 @@ import { BiLogoLinkedin } from "react-icons/bi";
 import { FaDrupal, FaStackOverflow } from 'react-icons/fa';
 import { IoLogoGithub, IoMdCall } from "react-icons/io";
 import { MdAlternateEmail } from "react-icons/md";
+import { TbBrandFiverr } from "react-icons/tb";
 import ContactForm from './contact-form';
-import { SiFiverr } from 'react-icons/si';
 
 function ContactSection() {
   const cleanPhoneNumber = personalData.phone.replace(/[^\d+]/g, '');
@@ -58,7 +58,7 @@ function ContactSection() {
               />
             </Link>
             <Link target="_blank" href={personalData.fiverr}>
-              <SiFiverr
+              <TbBrandFiverr
                 className="bg-[#8b98a5] p-3 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
                 size={48}
               />

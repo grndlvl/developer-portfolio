@@ -5,12 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 import Typewriter from 'typewriter-effect';
 import { BsGithub, BsLinkedin } from "react-icons/bs";
-import { SiFiverr } from "react-icons/si";
 import { SiDrupal } from "react-icons/si";
+import { TbBrandFiverr } from "react-icons/tb";
 import { FaFacebook, FaTwitterSquare } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
 import { RiContactsFill } from "react-icons/ri";
-import { SiLeetcode } from "react-icons/si";
 import { toCamelCase } from "@/utils/stringUtils";
 
 function HeroSection() {
@@ -80,7 +79,7 @@ function HeroSection() {
               target='_blank'
               className="transition-all text-pink-500 hover:scale-125 duration-300"
             >
-              <SiFiverr size={30} />
+              <TbBrandFiverr size={30} />
             </Link>
           </div>
 

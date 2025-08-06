@@ -1,16 +1,16 @@
 // @flow strict
 'use client';
-import { personalData } from "@/utils/data/personal-data";
-import Image from "next/image";
-import Link from "next/link";
+import { personalData } from '@/utils/data/personal-data';
+import Image from 'next/image';
+import Link from 'next/link';
 import Typewriter from 'typewriter-effect';
-import { BsGithub, BsLinkedin } from "react-icons/bs";
-import { SiDrupal } from "react-icons/si";
-import { TbBrandFiverr } from "react-icons/tb";
-import { FaFacebook, FaTwitterSquare } from "react-icons/fa";
-import { MdDownload } from "react-icons/md";
-import { RiContactsFill } from "react-icons/ri";
-import { toCamelCase } from "@/utils/stringUtils";
+import { BsGithub, BsLinkedin, BsTwitterX } from 'react-icons/bs';
+import { SiDrupal } from 'react-icons/si';
+import { TbBrandFiverr } from 'react-icons/tb';
+import { FaFacebook, FaTwitterSquare } from 'react-icons/fa';
+import { MdDownload } from 'react-icons/md';
+import { RiContactsFill } from 'react-icons/ri';
+import { toCamelCase } from '@/utils/stringUtils';
 
 function HeroSection() {
   const cleanedDesignation = personalData.designation.replace('&', '</span> & <span class="text-[#16f2b3]">');
@@ -22,6 +22,8 @@ function HeroSection() {
         alt="Hero"
         width={1572}
         height={795}
+        priority
+        formats={['image/avif', 'image/webp']}
         className="absolute -top-[98px] -z-10"
       />
 
@@ -80,6 +82,13 @@ function HeroSection() {
               className="transition-all text-pink-500 hover:scale-125 duration-300"
             >
               <TbBrandFiverr size={30} />
+            </Link>
+            <Link
+              href={personalData.twitter}
+              target='_blank'
+              className="transition-all text-pink-500 hover:scale-125 duration-300"
+            >
+              <BsTwitterX size={30} />
             </Link>
           </div>
 

@@ -13,5 +13,6 @@ export const personalData = {
   drupal: 'https://www.drupal.org/u/grndlvl',
   devUsername: "grndlvl",
   resume: "/JonathanDeLaigle.pdf",
-  fiverr: "https://www.fiverr.com/jdelaigle"
+  fiverr: "https://www.fiverr.com/jdelaigle",
+  twitter: "https://x.com/grndlvl",
 }

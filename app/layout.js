@@ -1,3 +1,4 @@
+import { personalData } from '@/utils/data/personal-data';
 import { GoogleTagManager } from "@next/third-parties/google";
 import { Inter } from "next/font/google";
 import { ToastContainer } from "react-toastify";
@@ -11,8 +12,18 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Jonathan DeLaigle – CTO & Software Engineer",
-  description:
-    "Jonathan DeLaigle – CTO and software engineer specializing in scalable systems, AI-driven development, DevOps, and full-stack delivery. Trusted by CHOP, Merck, LSAC, and Johns Hopkins.",
+  description: "Jonathan DeLaigle – CTO and software engineer specializing in scalable systems, AI-driven development, DevOps, and full-stack delivery. Trusted by CHOP, Merck, LSAC, and Johns Hopkins.",
+  openGraph: {
+    images: [
+      {
+        url: personalData.profile,
+        width: 945,
+        height: 846,
+        alt: personalData.name,
+      },
+    ],
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }) {

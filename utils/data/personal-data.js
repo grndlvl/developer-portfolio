@@ -15,4 +15,5 @@ export const personalData = {
   resume: "/JonathanDeLaigle.pdf",
   fiverr: "https://www.fiverr.com/jdelaigle",
   twitter: "https://x.com/grndlvl",
+  facebook: "https://www.facebook.com/grndlvltech"
 }

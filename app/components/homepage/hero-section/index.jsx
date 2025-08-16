@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Typewriter from 'typewriter-effect';
 import { BsGithub, BsFacebook, BsLinkedin, BsTwitterX } from 'react-icons/bs';
-import { SiDrupal } from 'react-icons/si';
+import { SiCalendly, SiDrupal } from 'react-icons/si';
 import { TbBrandFiverr } from 'react-icons/tb';
 import { FaFacebook, FaTwitterSquare } from 'react-icons/fa';
 import { MdDownload } from 'react-icons/md';
@@ -96,6 +96,13 @@ function HeroSection() {
               className="transition-all text-pink-500 hover:scale-125 duration-300"
             >
               <BsFacebook size={30} />
+            </Link>
+            <Link
+              href={personalData.calendly}
+              target='_blank'
+              className="transition-all text-pink-500 hover:scale-125 duration-300"
+            >
+              <SiCalendly size={30} />
             </Link>
           </div>
 

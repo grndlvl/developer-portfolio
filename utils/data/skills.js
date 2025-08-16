@@ -13,6 +13,7 @@ export const skillsData = [
   'Java',
   'PHP',
   'Python',
+  'FastAPI',
   'OpenAI',
   'Akamai',
   'Digital Ocean',

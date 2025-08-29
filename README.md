@@ -164,6 +164,24 @@ export const personalData = {
 ```
 
 `devUsername` is used for fetching blog posts from `dev.to`.
+### Short URL Redirects
+
+Define your short URL mappings in `utils/data/redirectsData.js` by adding entries in the `redirectsData` object:
+
+```javascript
+export const redirectsData = {
+  'asdfasfdsfd': 'https://google.com',
+  // Add more mappings here
+};
+```
+
+Then, set the `SHORT_DOMAIN` environment variable in your `.env` file:
+
+```env
+SHORT_DOMAIN=grndlvl.tech
+```
+
+Requests to `https://<SHORT_DOMAIN>/<slug>` will be redirected to the configured destination URLs. If a slug is not found, it will redirect to your main site (e.g. `https://grndlvl.com`).
 
 ---
 

@@ -25,6 +25,18 @@ module.exports = {
   },
   async redirects() {
     return [
+      // Redirect root of the short domain to the main site
+      {
+        source: '/',
+        has: [
+          {
+            type: 'host',
+            value: process.env.SHORT_DOMAIN,
+          },
+        ],
+        destination: `https://${process.env.MAIN_DOMAIN || 'grndlvl.com'}`,
+        permanent: false,
+      },
       {
         source: '/JonathanDeLaigle.pdf',
         destination: 'https://mozilla.github.io/pdf.js/web/viewer.html?file=https://raw.githubusercontent.com/grndlvl/resume/master/jonathan_delaigle.pdf',

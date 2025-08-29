@@ -182,6 +182,7 @@ SHORT_DOMAIN=grndlvl.tech
 ```
 
 Requests to `https://<SHORT_DOMAIN>/<slug>` will be redirected to the configured destination URLs. If a slug is not found, it will redirect to your main site (e.g. `https://grndlvl.com`).
+Additionally, requests to `https://<SHORT_DOMAIN>/` (no slug) will also redirect to your main site.
 
 ---
 

@@ -42,6 +42,7 @@
 - EDUCATION
 - BLOG
 - CONTACTS
+- LINKS (Linktree-inspired page at `/links`)
 
 ---
 
@@ -139,7 +140,9 @@ GMAIL_PASSKEY =
 EMAIL_ADDRESS =
 ```
 
+
 ### Then, Customize data in the `utils/data` [folder](https://github.com/said7388/developer-portfolio/tree/main/utils/data).
+- Define your quick links for the Linktree-inspired page in `utils/data/quicklinks-data.js`.
 
 Eg:
 
@@ -183,6 +186,7 @@ SHORT_DOMAIN=grndlvl.tech
 
 Requests to `https://<SHORT_DOMAIN>/<slug>` will be redirected to the configured destination URLs. If a slug is not found, it will redirect to your main site (e.g. `https://grndlvl.com`).
 Additionally, requests to `https://<SHORT_DOMAIN>/` (no slug) will also redirect to your main site.
+Additionally, requests to `https://<SHORT_DOMAIN>/links` will redirect to your main site's links page (e.g., `https://grndlvl.com/links`).
 
 ---
 

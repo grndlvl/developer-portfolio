@@ -6,18 +6,21 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { personalData } from '@/utils/data/personal-data';
 import { quickLinks } from '@/utils/data/quicklinks-data';
-import { BsGithub, BsLinkedin, BsFacebook, BsTwitterX } from 'react-icons/bs';
+import { BsGithub, BsInstagram, BsLinkedin, BsFacebook, BsTwitch, BsTwitterX, BsYoutube } from 'react-icons/bs';
 import { SiDrupal, SiCalendly } from 'react-icons/si';
 import { TbBrandFiverr } from 'react-icons/tb';
 
 export default function LinksPage() {
   const socialLinks = [
-    { name: 'GitHub', url: personalData.github, icon: BsGithub },
+    { name: 'YouTube', url: personalData.youtube, icon: BsYoutube },
+    { name: 'Twitch', url: personalData.twitch, icon: BsTwitch },
     { name: 'LinkedIn', url: personalData.linkedIn, icon: BsLinkedin },
-    { name: 'Drupal', url: personalData.drupal, icon: SiDrupal },
-    { name: 'Fiverr', url: personalData.fiverr, icon: TbBrandFiverr },
     { name: 'Twitter', url: personalData.twitter, icon: BsTwitterX },
     { name: 'Facebook', url: personalData.facebook, icon: BsFacebook },
+    { name: 'Instagram', url: personalData.instagram, icon: BsInstagram },
+    { name: 'GitHub', url: personalData.github, icon: BsGithub },
+    { name: 'Fiverr', url: personalData.fiverr, icon: TbBrandFiverr },
+    { name: 'Drupal', url: personalData.drupal, icon: SiDrupal },
     { name: 'Calendly', url: personalData.calendly, icon: SiCalendly },
   ];
 
@@ -64,7 +67,13 @@ export default function LinksPage() {
         className="rounded-full"
         priority
       />
-      <h1 className="text-4xl font-bold text-center">{personalData.devUsername}</h1>
+      <h1 className="text-[#16f2b3] text-4xl font-bold text-center">
+        <Link
+          href="/"
+          className=" text-[#16f2b3] text-3xl font-bold">
+          {personalData.devUsername}
+        </Link>
+      </h1>
       <h2 className="text-xl text-center text-gray-400">{personalData.name}</h2>
       <p className="text-center max-w-xl text-sm text-gray-300">
         {personalData.description}

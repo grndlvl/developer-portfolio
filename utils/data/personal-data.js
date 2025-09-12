@@ -16,5 +16,8 @@ export const personalData = {
   fiverr: "https://www.fiverr.com/jdelaigle",
   twitter: "https://x.com/grndlvl",
   facebook: "https://www.facebook.com/grndlvltech",
-  calendly: "https://calendly.com/grndlvl"
+  calendly: "https://calendly.com/grndlvl",
+  youtube: "https://www.youtube.com/@grndlvltech",
+  twitch: "https://www.twitch.tv/grndlvltech",
+  instagram: "https://www.instagram.com/grndlvltech",
 }

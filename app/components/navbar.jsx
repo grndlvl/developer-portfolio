@@ -1,8 +1,14 @@
 // @flow strict
+"use client";
+import { usePathname } from 'next/navigation';
 import Link from "next/link";
 
 
 function Navbar() {
+  const pathname = usePathname();
+  if (pathname.startsWith('/links')) {
+    return null;
+  }
   return (
     <nav className="bg-transparent">
       <div className="flex items-center justify-between py-5">
@@ -10,7 +16,7 @@ function Navbar() {
           <Link
             href="/"
             className=" text-[#16f2b3] text-3xl font-bold">
-            Jonathan DeLaigle
+            grndlvl
           </Link>
         </div>
 

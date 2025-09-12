@@ -1,4 +1,7 @@
 // Linktree-inspired page listing social links and custom quick links
+"use client";
+import { toast } from 'react-toastify';
+import { AiOutlineShareAlt } from 'react-icons/ai';
 import Image from 'next/image';
 import Link from 'next/link';
 import { personalData } from '@/utils/data/personal-data';
@@ -20,6 +23,29 @@ export default function LinksPage() {
 
   return (
     <section className="relative flex flex-col items-center justify-center py-16 space-y-8">
+      <div className="absolute top-4 right-4">
+        <button
+          onClick={async () => {
+            if (navigator.share) {
+              try {
+                await navigator.share({
+                  title: document.title,
+                  url: window.location.href,
+                });
+              } catch (err) {
+                console.error(err);
+              }
+            } else {
+              await navigator.clipboard.writeText(window.location.href);
+              toast.success('Link copied to clipboard');
+            }
+          }}
+          className="flex items-center space-x-1 px-3 py-1 bg-gray-800 rounded hover:bg-gray-700 transition"
+        >
+          <AiOutlineShareAlt size={20} />
+          <span>Share</span>
+        </button>
+      </div>
       {/* background graphic from home hero */}
       <Image
         src="/hero.svg"
@@ -38,7 +64,8 @@ export default function LinksPage() {
         className="rounded-full"
         priority
       />
-      <h1 className="text-4xl font-bold text-center">{personalData.name}</h1>
+      <h1 className="text-4xl font-bold text-center">{personalData.devUsername}</h1>
+      <h2 className="text-xl text-center text-gray-400">{personalData.name}</h2>
       <p className="text-center max-w-xl text-sm text-gray-300">
         {personalData.description}
       </p>

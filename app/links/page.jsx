@@ -7,15 +7,17 @@ import Link from 'next/link';
 import { personalData } from '@/utils/data/personal-data';
 import { quickLinks } from '@/utils/data/quicklinks-data';
 import { BsGithub, BsInstagram, BsLinkedin, BsFacebook, BsTwitch, BsTwitterX, BsYoutube } from 'react-icons/bs';
-import { SiDrupal, SiCalendly } from 'react-icons/si';
+import { SiDrupal, SiCalendly, SiKick, SiBluesky } from 'react-icons/si';
 import { TbBrandFiverr } from 'react-icons/tb';
 
 export default function LinksPage() {
   const socialLinks = [
     { name: 'YouTube', url: personalData.youtube, icon: BsYoutube },
     { name: 'Twitch', url: personalData.twitch, icon: BsTwitch },
+    { name: 'Kick', url: personalData.kick, icon: SiKick },
     { name: 'LinkedIn', url: personalData.linkedIn, icon: BsLinkedin },
     { name: 'Twitter', url: personalData.twitter, icon: BsTwitterX },
+    { name: 'Bluesky', url: personalData.bluesky, icon: SiBluesky },
     { name: 'Facebook', url: personalData.facebook, icon: BsFacebook },
     { name: 'Instagram', url: personalData.instagram, icon: BsInstagram },
     { name: 'GitHub', url: personalData.github, icon: BsGithub },

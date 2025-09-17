@@ -20,4 +20,6 @@ export const personalData = {
   youtube: "https://www.youtube.com/@grndlvltech",
   twitch: "https://www.twitch.tv/grndlvltech",
   instagram: "https://www.instagram.com/grndlvltech",
+  kick: "https://kick.com/grndlvl",
+  bluesky: "https://bsky.app/profile/grndlvl.com",
 }

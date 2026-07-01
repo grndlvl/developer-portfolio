@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1125" height="675" viewBox="0 0 1125 675">
+  <defs>
+    <radialGradient id="glowb" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#16f2b3" stop-opacity="0.12"/>
+      <stop offset="70%" stop-color="#16f2b3" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="0" y="0" width="1125" height="675" fill="#0d1224"/>
+  <rect x="0" y="0" width="1125" height="675" fill="url(#glowb)"/>
+  <!-- glyph >_ centered -->
+  <g transform="translate(562.5,285) scale(3.6)" >
+    <path d="M-18 -20 L-8 -10 L-18 0" fill="none" stroke="#16f2b3" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="-4" y1="0" x2="8" y2="0" stroke="#16f2b3" stroke-width="4.5" stroke-linecap="round"/>
+  </g>
+  <text x="562.5" y="470" text-anchor="middle" font-family="JetBrainsMono Nerd Font Mono, monospace" font-weight="bold" font-size="60" fill="#16f2b3">grndlvl</text>
+  <text x="562.5" y="512" text-anchor="middle" font-family="JetBrainsMono Nerd Font Mono, monospace" font-size="22" letter-spacing="4" fill="#4a5170">GROUNDLEVEL SOLUTIONS</text>
+</svg>

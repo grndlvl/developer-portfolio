@@ -138,36 +138,65 @@ function HeroSection() {
               <span className="text-pink-500">=</span>{" "}
               <span className="text-gray-400">{"{"}</span>
               {"\n  "}
-              <span className="text-cyan-300">agents</span>
+              <span className="text-cyan-300">experience</span>
+              <span className="text-gray-400">: </span>
+              <span className="text-amber-300">&apos;18+ years&apos;</span>
+              <span className="text-gray-400">,</span>
+              {"\n  "}
+              <span className="text-cyan-300">builds</span>
               <span className="text-gray-400">: [</span>
-              <span className="text-amber-300">&apos;plan&apos;</span>
+              <span className="text-amber-300">&apos;agents&apos;</span>
               <span className="text-gray-400">, </span>
-              <span className="text-amber-300">&apos;delegate&apos;</span>
-              <span className="text-gray-400">, </span>
-              <span className="text-amber-300">&apos;act&apos;</span>
+              <span className="text-amber-300">&apos;workflows&apos;</span>
               <span className="text-gray-400">],</span>
               {"\n  "}
               <span className="text-cyan-300">connects</span>
               <span className="text-gray-400">: [</span>
-              <span className="text-amber-300">&apos;data&apos;</span>
+              <span className="text-amber-300">&apos;models&apos;</span>
               <span className="text-gray-400">, </span>
-              <span className="text-amber-300">&apos;APIs&apos;</span>
+              <span className="text-amber-300">&apos;tools&apos;</span>
               <span className="text-gray-400">, </span>
               <span className="text-amber-300">&apos;people&apos;</span>
               <span className="text-gray-400">],</span>
               {"\n  "}
-              <span className="text-cyan-300">controls</span>
-              <span className="text-gray-400">: [</span>
-              <span className="text-amber-300">&apos;tests&apos;</span>
-              <span className="text-gray-400">, </span>
-              <span className="text-amber-300">&apos;evals&apos;</span>
-              <span className="text-gray-400">, </span>
-              <span className="text-amber-300">&apos;approval&apos;</span>
-              <span className="text-gray-400">],</span>
-              {"\n  "}
-              <span className="text-cyan-300">outcome</span>
+              <span className="text-cyan-300">tested</span>
               <span className="text-gray-400">: </span>
-              <span className="text-amber-300">&apos;work completed&apos;</span>
+              <span className="text-[#16f2b3]">true</span>
+              <span className="text-gray-400">,</span>
+              {"\n  "}
+              <span className="text-cyan-300">observable</span>
+              <span className="text-gray-400">: </span>
+              <span className="text-[#16f2b3]">true</span>
+              <span className="text-gray-400">,</span>
+              {"\n  "}
+              <span className="text-cyan-300">humanApproved</span>
+              <span className="text-gray-400">: </span>
+              <span className="text-[#16f2b3]">true</span>
+              <span className="text-gray-400">,</span>
+              {"\n  "}
+              <span className="text-white">shipsToProduction</span>
+              <span className="text-gray-400">() {"{"}</span>
+              {"\n    "}
+              <span className="text-pink-500">return</span>
+              <span className="text-gray-400"> (</span>
+              {"\n      "}
+              <span className="text-pink-500">this</span>
+              <span className="text-gray-400">.</span>
+              <span className="text-cyan-300">tested</span>
+              <span className="text-gray-400">{" && "}</span>
+              {"\n      "}
+              <span className="text-pink-500">this</span>
+              <span className="text-gray-400">.</span>
+              <span className="text-cyan-300">observable</span>
+              <span className="text-gray-400">{" && "}</span>
+              {"\n      "}
+              <span className="text-pink-500">this</span>
+              <span className="text-gray-400">.</span>
+              <span className="text-cyan-300">humanApproved</span>
+              {"\n    "}
+              <span className="text-gray-400">{");"}</span>
+              {"\n  "}
+              <span className="text-gray-400">{"}"}</span>
               {"\n"}
               <span className="text-gray-400">{"};"}</span>
             </code>

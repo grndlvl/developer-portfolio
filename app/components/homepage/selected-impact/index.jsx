@@ -1,5 +1,6 @@
 // @flow strict
 
+import Image from "next/image";
 import Link from "next/link";
 import { MdArrowOutward } from "react-icons/md";
 
@@ -7,6 +8,7 @@ const projects = [
   {
     type: "Applied AI · Accessibility engineering",
     title: "AI-assisted accessibility assurance",
+    logos: [{ src: "/logos/zivtech.png", alt: "Zivtech", width: 670, height: 159 }],
     description:
       "Designed a reusable Zivtech harness that combines deterministic automated testing with nondeterministic agent review. Applied on the NCLC platform, it covers both machine-testable failures and higher-context issues involving semantics, keyboard behavior, state communication, and user experience.",
     impact:
@@ -16,6 +18,7 @@ const projects = [
   {
     type: "AI adoption · Operating model",
     title: "Zivtech’s company-wide AI-first practice",
+    logos: [{ src: "/logos/zivtech.png", alt: "Zivtech", width: 670, height: 159 }],
     description:
       "Driving a company-wide mandate to make AI a standard part of how Zivtech operates—not a side tool. That includes agent-enabled research, specification, engineering, code review, documentation, quality assurance, accessibility, and internal workflows, with clear human accountability.",
     impact:
@@ -26,6 +29,7 @@ const projects = [
   {
     type: "Platform engineering · Logistics",
     title: "GroScale",
+    logos: [{ src: "/logos/groscale.png", alt: "GroScale", width: 500, height: 125 }],
     description:
       "Served as lead architect and developer for a high-throughput shipping platform integrating NetSuite, multiple carriers, label generation, tracking, and exception handling through APIs and webhooks.",
     impact: "Scaled from 10,000 to 500,000+ packages per month—a 50× increase—while handling peak loads without downtime.",
@@ -35,6 +39,7 @@ const projects = [
   {
     type: "Architecture · Publishing and commerce",
     title: "NCLC Digital Library",
+    logos: [{ src: "/logos/nclc.svg", alt: "NCLC", width: 217, height: 104 }],
     description:
       "Led the modernization of a subscription publishing platform from Drupal 7 to Drupal 10, including a React book reader, Solr search, automated content imports, subscription commerce, and the AI-assisted accessibility workflow.",
     impact: "A production-ready platform that streamlined editorial operations and improved access to authoritative legal resources.",
@@ -45,8 +50,14 @@ const projects = [
     type: "Architecture · Complex digital portfolios",
     title: "Enterprise and multi-brand platforms",
     description:
-      "Delivered architecture and engineering across institutional, enterprise, and consumer-brand environments, including Children’s Hospital of Philadelphia, Johns Hopkins, Merck, LSAC, Prestige Consumer Healthcare, and Philly Marketing Labs.",
+      "Delivered architecture and engineering across institutional, enterprise, and consumer-brand environments, including Children’s Hospital of Philadelphia, Johns Hopkins, Merck, LSAC, and Philly Marketing Labs.",
     impact: "Production digital systems with demanding content operations, integrations, governance, security, and accessibility requirements.",
+    logos: [
+      { src: "/logos/chop.svg", alt: "Children’s Hospital of Philadelphia", width: 511, height: 110 },
+      { src: "/logos/johns-hopkins.svg", alt: "Johns Hopkins Bloomberg School of Public Health", width: 294, height: 77 },
+      { src: "/logos/merck.svg", alt: "Merck", width: 207, height: 62 },
+      { src: "/logos/philly-marketing-labs.png", alt: "Philly Marketing Labs", width: 363, height: 100 },
+    ],
     href: "https://www.zivtech.com/project/childrens-hospital-philadelphia-vaccine-education-center",
     linkLabel: "View the CHOP project case study",
   },
@@ -98,6 +109,21 @@ function SelectedImpact() {
             <p className="mt-4 border-l-2 border-[#16f2b3] pl-4 text-sm leading-6 text-gray-400">
               {project.impact}
             </p>
+            {project.logos && (
+              <ul className="mt-6 flex flex-wrap items-center gap-x-7 gap-y-4">
+                {project.logos.map((logo) => (
+                  <li key={logo.alt}>
+                    <Image
+                      src={logo.src}
+                      width={logo.width}
+                      height={logo.height}
+                      alt={logo.alt}
+                      className="h-6 w-auto opacity-60 transition duration-200 [filter:brightness(0)_invert(1)] hover:opacity-100"
+                    />
+                  </li>
+                ))}
+              </ul>
+            )}
             {project.href && (
               <Link
                 href={project.href}

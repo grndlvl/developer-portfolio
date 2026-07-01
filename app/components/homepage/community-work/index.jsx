@@ -1,5 +1,6 @@
 // @flow strict
 
+import Image from "next/image";
 import Link from "next/link";
 import { MdArrowOutward } from "react-icons/md";
 import { TbHeartHandshake } from "react-icons/tb";
@@ -13,8 +14,16 @@ function CommunityWork() {
     >
       <div className="overflow-hidden rounded-2xl border border-[#293052] bg-[#11152c]">
         <div className="grid lg:grid-cols-[0.75fr_1.25fr]">
-          <div className="flex flex-col justify-between bg-gradient-to-br from-violet-700/30 to-pink-600/10 p-7 sm:p-9">
-            <div>
+          <div className="relative flex flex-col justify-between overflow-hidden bg-gradient-to-br from-violet-700/30 to-pink-600/10 p-7 sm:p-9">
+            <Image
+              src="/logos/backyard-bullies.jpg"
+              width={420}
+              height={420}
+              alt=""
+              aria-hidden="true"
+              className="pointer-events-none absolute -bottom-16 -right-16 h-80 w-80 rounded-full opacity-[0.12] grayscale"
+            />
+            <div className="relative z-10">
               <TbHeartHandshake
                 aria-hidden="true"
                 className="text-[#16f2b3]"
@@ -30,7 +39,7 @@ function CommunityWork() {
                 Practical technology for organizations of every size.
               </h2>
             </div>
-            <p className="mt-8 text-sm leading-6 text-gray-400">
+            <p className="relative z-10 mt-8 text-sm leading-6 text-gray-400">
               Enterprise experience, applied with the speed and resourcefulness
               small organizations need.
             </p>

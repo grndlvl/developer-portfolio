@@ -8,67 +8,72 @@ import { IoLogoGithub, IoMdCall } from 'react-icons/io';
 import { MdAlternateEmail } from 'react-icons/md';
 import { SiCalendly } from "react-icons/si";
 import { TbBrandFiverr } from "react-icons/tb";
+import SectionHeading from '../../helper/section-heading';
 import ContactForm from './contact-form';
 
 function ContactSection() {
   const cleanPhoneNumber = personalData.phone.replace(/[^\d+]/g, '');
 
   return (
-    <div id="contact" className="my-12 lg:my-16 relative mt-24 text-white">
-      <div className="hidden lg:flex flex-col items-center absolute top-24 -right-8">
-        <span className="bg-[#1a1443] w-fit text-white rotate-90 p-2 px-5 text-xl rounded-md">
-          CONTACT
-        </span>
-        <span className="h-36 w-[2px] bg-[#1a1443]"></span>
-      </div>
+    <section
+      id="contact"
+      aria-labelledby="contact-heading"
+      className="relative my-16 scroll-mt-20 border-t border-[#25213b] pt-16 text-white lg:my-24"
+    >
+      <SectionHeading
+        id="contact-heading"
+        eyebrow="Contact"
+        title="Let's put AI to work in your business."
+        className="mb-10"
+      />
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
         <ContactForm />
         <div className="lg:w-3/4 ">
           <div className="flex flex-col gap-5 lg:gap-9">
             <p className="text-sm md:text-xl flex items-center gap-3">
               <MdAlternateEmail
-                className="bg-[#8b98a5] p-2 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
+                className="rounded-full border border-[#293052] bg-[#11152c] p-2 text-gray-300 transition-all duration-300 hover:scale-110 hover:border-[#16f2b3] hover:bg-[#16f2b3]/10 hover:text-[#16f2b3] cursor-pointer"
                 size={36}
               />
               <span><a href={`mailto:${personalData.email}`}>{personalData.email}</a></span>
             </p>
             <p className="text-sm md:text-xl flex items-center gap-3">
               <IoMdCall
-                className="bg-[#8b98a5] p-2 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
+                className="rounded-full border border-[#293052] bg-[#11152c] p-2 text-gray-300 transition-all duration-300 hover:scale-110 hover:border-[#16f2b3] hover:bg-[#16f2b3]/10 hover:text-[#16f2b3] cursor-pointer"
                 size={36}
               />
               <span><a href={`tel:${cleanPhoneNumber}`}>{personalData.phone}</a></span>
             </p>
           </div>
           <div className="mt-8 lg:mt-16 flex items-center gap-5 lg:gap-10">
-            <Link target="_blank" href={personalData.linkedIn}>
+            <Link target="_blank" rel="noreferrer" aria-label="Jonathan DeLaigle on LinkedIn (opens in new window)" href={personalData.linkedIn}>
               <BiLogoLinkedin
-                className="bg-[#8b98a5] p-3 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
+                className="rounded-full border border-[#293052] bg-[#11152c] p-3 text-gray-300 transition-all duration-300 hover:scale-110 hover:border-[#16f2b3] hover:bg-[#16f2b3]/10 hover:text-[#16f2b3] cursor-pointer"
                 size={48}
               />
             </Link>
-            <Link target="_blank" href={personalData.twitter}>
+            <Link target="_blank" rel="noreferrer" aria-label="Jonathan DeLaigle on X (opens in new window)" href={personalData.twitter}>
               <BsTwitterX
-                className="bg-[#8b98a5] p-3 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
+                className="rounded-full border border-[#293052] bg-[#11152c] p-3 text-gray-300 transition-all duration-300 hover:scale-110 hover:border-[#16f2b3] hover:bg-[#16f2b3]/10 hover:text-[#16f2b3] cursor-pointer"
                 size={48}
               />
             </Link>
-            <Link target="_blank" href={personalData.facebook}>
+            <Link target="_blank" rel="noreferrer" aria-label="Jonathan DeLaigle on Facebook (opens in new window)" href={personalData.facebook}>
               <FaFacebookF
-                className="bg-[#8b98a5] p-3 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
+                className="rounded-full border border-[#293052] bg-[#11152c] p-3 text-gray-300 transition-all duration-300 hover:scale-110 hover:border-[#16f2b3] hover:bg-[#16f2b3]/10 hover:text-[#16f2b3] cursor-pointer"
                 size={48}
               />
             </Link>
-            <Link target="_blank" href={personalData.calendly}>
+            <Link target="_blank" rel="noreferrer" aria-label="Schedule a call with Jonathan DeLaigle (opens in new window)" href={personalData.calendly}>
               <SiCalendly
-                className="bg-[#8b98a5] p-3 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
+                className="rounded-full border border-[#293052] bg-[#11152c] p-3 text-gray-300 transition-all duration-300 hover:scale-110 hover:border-[#16f2b3] hover:bg-[#16f2b3]/10 hover:text-[#16f2b3] cursor-pointer"
                 size={48}
               />
             </Link>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

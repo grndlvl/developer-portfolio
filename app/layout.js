@@ -1,6 +1,6 @@
 import { personalData } from '@/utils/data/personal-data';
 import { GoogleTagManager } from "@next/third-parties/google";
-import { Inter } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Footer from "./components/footer";
@@ -9,10 +9,18 @@ import Navbar from "./components/navbar";
 import "./css/card.scss";
 import "./css/globals.scss";
 const inter = Inter({ subsets: ["latin"] });
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-mono",
+});
 
 export const metadata = {
-  title: "Jonathan DeLaigle – CTO & Software Engineer",
-  description: "Jonathan DeLaigle – CTO and software engineer specializing in scalable systems, AI-driven development, DevOps, and full-stack delivery. Trusted by CHOP, Merck, LSAC, and Johns Hopkins.",
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_APP_URL || "https://www.grndlvl.com"
+  ),
+  title: "Jonathan DeLaigle | Applied AI Architect & CTO",
+  description: "Jonathan DeLaigle designs agentic AI systems, integrates AI into business workflows, and builds production software. Applied AI architect, CTO, and software engineer.",
   openGraph: {
     images: [
       {
@@ -29,7 +37,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} ${jetbrainsMono.variable}`}>
         <ToastContainer />
         <main className="min-h-screen relative mx-auto px-6 sm:px-12 lg:max-w-[70rem] xl:max-w-[76rem] 2xl:max-w-[92rem] text-white">
           <Navbar />

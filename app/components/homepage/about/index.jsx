@@ -6,46 +6,54 @@ import Link from "next/link";
 
 function AboutSection() {
   return (
-    <div id="about" className="my-12 lg:my-16 relative">
-      <div className="hidden lg:flex flex-col items-center absolute top-16 -right-8">
-        <span className="bg-[#1a1443] w-fit text-white rotate-90 p-2 px-5 text-xl rounded-md">
-          ABOUT
-        </span>
-        <span className="h-36 w-[2px] bg-[#1a1443]"></span>
-      </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
+    <section
+      id="about"
+      aria-labelledby="about-heading"
+      className="my-16 scroll-mt-20 lg:my-24"
+    >
+      <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:gap-16">
         <div className="order-2 lg:order-1">
-          <p className="font-medium mb-5 text-[#16f2b3] text-xl uppercase">
-            About Me
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#16f2b3]">
+            About me
           </p>
-          <p className="text-gray-200 text-sm lg:text-lg">
+          <h2
+            id="about-heading"
+            className="mt-3 text-3xl font-bold text-white sm:text-4xl"
+          >
+            Turning complex technology into systems people rely on.
+          </h2>
+          <p className="mt-5 text-base leading-7 text-gray-300 sm:text-lg">
             {personalData.description}
           </p>
-          {personalData.openForWork && <p className="text-gray-400 text-sm lg:text-base mt-4">
-            {personalData.openForWorkDescription}
-          </p>}
+          {personalData.openForWork && (
+            <p className="mt-4 text-base leading-7 text-gray-400">
+              {personalData.openForWorkDescription}
+            </p>
+          )}
         </div>
-        <div className="flex justify-center order-1 lg:order-2">
-          <div className="flex flex-col items-center space-y-2">
-            <div className="max-h-[280px] max-w-[280px] overflow-hidden rounded-lg transition-all duration-1000">
+        <div className="order-1 flex justify-center lg:order-2">
+          <div className="flex flex-col items-center gap-4">
+            <div className="overflow-hidden rounded-2xl border border-[#293052] bg-[#11152c] p-2 shadow-2xl shadow-violet-950/30">
               <Image
                 src={personalData.profile}
-                width={280}
-                height={280}
-                alt="{personalData.name}'s profile picture"
-                className="object-cover grayscale hover:grayscale-0 hover:scale-110 transition-all duration-1000 cursor-pointer"
+                width={300}
+                height={300}
+                alt={`${personalData.name}, applied AI architect and CTO`}
+                className="rounded-xl object-cover grayscale transition-all duration-700 hover:grayscale-0"
               />
             </div>
-            {personalData.openForWork && <Link href="#contact">
-              <span className="text-xs font-medium px-3 py-1 rounded-full bg-[#16f2b3]/10 text-[#16f2b3] border border-[#16f2b3] hover:bg-[#16f2b3]/20 hover:shadow-md transition-all duration-300 animate-pulse hover:animate-none">
-                {personalData.openForWorkTitle}
-              </span>
-            </Link>}
+            {personalData.openForWork && (
+              <Link href="#contact">
+                <span className="rounded-full border border-[#16f2b3] bg-[#16f2b3]/10 px-4 py-1.5 text-xs font-medium text-[#16f2b3] transition-all duration-300 animate-pulse hover:animate-none hover:bg-[#16f2b3]/20 hover:shadow-md">
+                  {personalData.openForWorkTitle}
+                </span>
+              </Link>
+            )}
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
-};
+}
 
 export default AboutSection;

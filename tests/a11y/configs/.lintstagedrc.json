@@ -1,0 +1,8 @@
+{
+  "{app,utils}/**/*.{jsx,tsx,js,ts}": [
+    "eslint --max-warnings 0"
+  ],
+  "{app,styles}/**/*.{css,scss}": [
+    "stylelint --allow-empty-input --config tests/a11y/configs/.stylelintrc.a11y.json"
+  ]
+}

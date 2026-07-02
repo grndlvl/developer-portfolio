@@ -1,3 +1,26 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["next/core-web-vitals", "plugin:jsx-a11y/strict"],
+  "rules": {
+    "jsx-a11y/alt-text": ["error", {
+      "elements": ["img", "object", "area", "input[type=\"image\"]"],
+      "img": ["Image", "NextImage"],
+      "object": [],
+      "area": [],
+      "input[type=\"image\"]": []
+    }],
+    "jsx-a11y/anchor-is-valid": ["error", {
+      "components": ["Link"],
+      "specialLink": ["hrefLeft", "hrefRight"],
+      "aspects": ["invalidHref", "preferButton"]
+    }],
+    "jsx-a11y/label-has-associated-control": ["error", {
+      "labelComponents": ["Label"],
+      "labelAttributes": ["label"],
+      "controlComponents": ["Input", "Select", "Textarea"],
+      "depth": 3
+    }],
+    "jsx-a11y/no-autofocus": ["error", {
+      "ignoreNonDOM": true
+    }]
+  }
 }

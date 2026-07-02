@@ -32,6 +32,7 @@ function ContactSection() {
           <div className="flex flex-col gap-5 lg:gap-9">
             <p className="text-sm md:text-xl flex items-center gap-3">
               <MdAlternateEmail
+                aria-hidden="true"
                 className="rounded-full border border-[#293052] bg-[#11152c] p-2 text-gray-300 transition-all duration-300 hover:scale-110 hover:border-[#16f2b3] hover:bg-[#16f2b3]/10 hover:text-[#16f2b3] cursor-pointer"
                 size={36}
               />
@@ -39,6 +40,7 @@ function ContactSection() {
             </p>
             <p className="text-sm md:text-xl flex items-center gap-3">
               <IoMdCall
+                aria-hidden="true"
                 className="rounded-full border border-[#293052] bg-[#11152c] p-2 text-gray-300 transition-all duration-300 hover:scale-110 hover:border-[#16f2b3] hover:bg-[#16f2b3]/10 hover:text-[#16f2b3] cursor-pointer"
                 size={36}
               />
@@ -48,24 +50,28 @@ function ContactSection() {
           <div className="mt-8 lg:mt-16 flex items-center gap-5 lg:gap-10">
             <Link target="_blank" rel="noreferrer" aria-label="Jonathan DeLaigle on LinkedIn (opens in new window)" href={personalData.linkedIn}>
               <BiLogoLinkedin
+                aria-hidden="true"
                 className="rounded-full border border-[#293052] bg-[#11152c] p-3 text-gray-300 transition-all duration-300 hover:scale-110 hover:border-[#16f2b3] hover:bg-[#16f2b3]/10 hover:text-[#16f2b3] cursor-pointer"
                 size={48}
               />
             </Link>
             <Link target="_blank" rel="noreferrer" aria-label="Jonathan DeLaigle on X (opens in new window)" href={personalData.twitter}>
               <BsTwitterX
+                aria-hidden="true"
                 className="rounded-full border border-[#293052] bg-[#11152c] p-3 text-gray-300 transition-all duration-300 hover:scale-110 hover:border-[#16f2b3] hover:bg-[#16f2b3]/10 hover:text-[#16f2b3] cursor-pointer"
                 size={48}
               />
             </Link>
             <Link target="_blank" rel="noreferrer" aria-label="Jonathan DeLaigle on Facebook (opens in new window)" href={personalData.facebook}>
               <FaFacebookF
+                aria-hidden="true"
                 className="rounded-full border border-[#293052] bg-[#11152c] p-3 text-gray-300 transition-all duration-300 hover:scale-110 hover:border-[#16f2b3] hover:bg-[#16f2b3]/10 hover:text-[#16f2b3] cursor-pointer"
                 size={48}
               />
             </Link>
             <Link target="_blank" rel="noreferrer" aria-label="Schedule a call with Jonathan DeLaigle (opens in new window)" href={personalData.calendly}>
               <SiCalendly
+                aria-hidden="true"
                 className="rounded-full border border-[#293052] bg-[#11152c] p-3 text-gray-300 transition-all duration-300 hover:scale-110 hover:border-[#16f2b3] hover:bg-[#16f2b3]/10 hover:text-[#16f2b3] cursor-pointer"
                 size={48}
               />

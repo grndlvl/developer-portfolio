@@ -1,0 +1,18 @@
+{
+  "plugins": ["@double-great/stylelint-a11y"],
+  "overrides": [
+    {
+      "files": ["**/*.scss"],
+      "customSyntax": "postcss-scss"
+    }
+  ],
+  "rules": {
+    "a11y/no-outline-none": true,
+    "a11y/selector-pseudo-class-focus": true,
+    "a11y/media-prefers-reduced-motion": true,
+    "a11y/no-text-align-justify": true,
+    "a11y/font-size-is-readable": true,
+    "a11y/no-spread-text": true,
+    "a11y/content-property-no-static-value": true
+  }
+}

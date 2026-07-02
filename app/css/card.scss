@@ -43,6 +43,10 @@
   mask-clip: padding-box, border-box;
   opacity: var(--active);
   transition: opacity 1s;
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
 }
 
 .glow-card::before {
@@ -64,6 +68,10 @@
   mask-composite: intersect;
   opacity: var(--active);
   transition: opacity 1s;
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
 }
 
 .glow-card::after {
@@ -93,4 +101,8 @@
   filter: brightness(1.5);
   mask-clip: padding-box, border-box;
   mask-composite: intersect;
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
 }

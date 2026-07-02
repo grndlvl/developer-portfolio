@@ -124,12 +124,21 @@ function HeroSection() {
               <span className="h-3 w-3 rounded-full bg-amber-400" />
               <span className="h-3 w-3 rounded-full bg-green-300" />
             </div>
-            <span className="font-mono text-xs text-gray-500">
+            <span className="font-mono text-xs text-gray-400">
               applied-ai.js
             </span>
           </div>
+          {/*
+            role="region" + tabIndex are the WAI-ARIA APG pattern for a
+            keyboard-focusable scrollable region (WCAG 2.1.1 / 2.4.3); the
+            underlying content is genuinely non-interactive, so the noninteractive
+            tabindex lint rule is a known false positive for this pattern.
+          */}
           <pre
+            role="region"
             aria-label="Code example describing Jonathan's applied AI practice"
+            // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+            tabIndex={0}
             className="overflow-x-auto p-5 font-mono text-xs leading-7 sm:p-7 sm:text-sm"
           >
             <code>

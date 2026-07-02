@@ -44,7 +44,7 @@ function AboutSection() {
             </div>
             {personalData.openForWork && (
               <Link href="#contact">
-                <span className="rounded-full border border-[#16f2b3] bg-[#16f2b3]/10 px-4 py-1.5 text-xs font-medium text-[#16f2b3] transition-all duration-300 animate-pulse hover:animate-none hover:bg-[#16f2b3]/20 hover:shadow-md">
+                <span className="rounded-full border border-[#16f2b3] bg-[#16f2b3]/10 px-4 py-1.5 text-xs font-medium text-[#16f2b3] transition-all duration-300 badge-pulse hover:animate-none hover:bg-[#16f2b3]/20 hover:shadow-md">
                   {personalData.openForWorkTitle}
                 </span>
               </Link>

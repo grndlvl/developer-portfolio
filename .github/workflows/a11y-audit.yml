@@ -1,0 +1,139 @@
+name: Accessibility Audit
+
+on:
+  push:
+    branches:
+      - main
+      # TODO_RELEASE_BRANCH: Configure release branch pattern
+      - 'release/**'
+  schedule:
+    # TODO_SCHEDULE: Configure audit schedule
+    # Default: weekly on Monday at 6am UTC
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+jobs:
+  a11y-audit:
+    name: Full Accessibility Audit (non-deploy-blocking)
+    runs-on: ubuntu-latest
+    # Keep this workflow separate from deployment gating unless the project
+    # explicitly chooses deploy-blocking accessibility enforcement.
+    # TODO_ENVIRONMENT_URL: Set if using GitHub Environments for deployment URLs
+    # environment:
+    #   name: staging
+    #   url: ${{ vars.DEPLOY_URL }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Run linters
+        if: always()
+        run: |
+          # scripts/a11y-audit.sh: Path to a11y-audit.sh
+          bash scripts/a11y-audit.sh --lint-only || true
+
+      - name: Playwright axe-core audit (full URL set)
+        if: always()
+        run: |
+          # tests/a11y/playwright.config.ts: Path to playwright.a11y.config.ts
+          npx playwright test --config=tests/a11y/playwright.config.ts
+        env:
+          # https://www.grndlvl.com: Set the URL to test against
+          BASE_URL: ${{ vars.DEPLOY_URL || 'https://www.grndlvl.com' }}
+          A11Y_SCOPE: full
+
+      - name: Pa11y-CI audit (full URL set)
+        if: always()
+        run: |
+          # tests/a11y/configs/.pa11yci.cjs: Path to .pa11yci.cjs
+          npx pa11y-ci --config tests/a11y/configs/.pa11yci.cjs
+        env:
+          BASE_URL: ${{ vars.DEPLOY_URL || 'https://www.grndlvl.com' }}
+          A11Y_SCOPE: full
+
+      - name: Optional Claude browser-artifact triage
+        if: always()
+        run: |
+          # browser-artifacts triage reviews the axe/Pa11y artifacts generated above.
+          # It needs no live URL and no --target — it reads machine evidence only.
+          if [ -n "${ANTHROPIC_API_KEY:-}" ]; then
+            # scripts/a11y-audit.sh: Path to a11y-audit.sh
+            # Multisite projects only: add a target so site URLs resolve, e.g.
+            #   bash scripts/a11y-audit.sh --claude-only --target=dev2 --claude-scope browser-artifacts
+            # TODO_TARGET (multisite): key from tests/a11y/configs/a11y-targets.json (prod, staging, dev2).
+            bash scripts/a11y-audit.sh --claude-only --claude-scope browser-artifacts || echo "Claude browser-artifact triage failed (non-blocking)"
+          else
+            echo "ANTHROPIC_API_KEY not set; skipping Claude browser-artifact triage."
+          fi
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        continue-on-error: true
+
+      - name: Upload audit results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: a11y-audit-results
+          path: |
+            test-results/
+            tests/a11y/reports/
+            a11y-pr-review.md
+            a11y-staged-review.md
+            a11y-release-review.md
+            a11y-artifact-review.md
+            a11y-browser-review*.md
+          retention-days: 30
+
+      # Notification steps — Slack ping + auto-opening/updating GH Issue.
+      # Both fire on any failure (cron, push to default branch, push to release, manual dispatch).
+      # Requires:
+      #   - Org-level secret `SLACK_BOT_TOKEN` (Slack app bot token, scopes: chat:write, chat:write.public)
+      #   - Repo-level variable `SLACK_A11Y_CHANNEL` (channel ID like C012345AB, or `#channel-name`)
+      #   - `.github/A11Y_REGRESSION_ISSUE.md` (provided by this skill)
+      - name: Notify Slack on failure
+        if: failure()
+        uses: slackapi/slack-github-action@v1
+        with:
+          method: chat.postMessage
+          token: ${{ secrets.SLACK_BOT_TOKEN }}
+          payload: |
+            {
+              "channel": "${{ vars.SLACK_A11Y_CHANNEL }}",
+              "text": ":warning: Accessibility audit failed on ${{ github.repository }} (${{ github.event_name }})",
+              "blocks": [
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "*:warning: Accessibility audit failed* — `${{ github.repository }}`\nTrigger: `${{ github.event_name }}` · Target: `${{ vars.DEPLOY_URL || 'https://www.grndlvl.com' }}`\n<${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|View workflow run>"
+                  }
+                }
+              ]
+            }
+        continue-on-error: true
+
+      - name: Open or update GitHub Issue on failure
+        if: failure()
+        uses: JasonEtco/create-an-issue@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          WORKFLOW_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          TRIGGER: ${{ github.event_name }}
+        with:
+          filename: .github/A11Y_REGRESSION_ISSUE.md
+          update_existing: true
+          search_existing: open
+        continue-on-error: true

@@ -1,5 +1,6 @@
 // Linktree-inspired page listing social links and custom quick links
 "use client";
+import { useEffect } from 'react';
 import { toast } from 'react-toastify';
 import { AiOutlineShareAlt } from 'react-icons/ai';
 import Image from 'next/image';
@@ -11,6 +12,10 @@ import { SiDrupal, SiCalendly, SiKick, SiBluesky } from 'react-icons/si';
 import { TbBrandFiverr } from 'react-icons/tb';
 
 export default function LinksPage() {
+  useEffect(() => {
+    document.title = 'Jonathan DeLaigle | Links';
+  }, []);
+
   const socialLinks = [
     { name: 'YouTube', url: personalData.youtube, icon: BsYoutube },
     { name: 'Twitch', url: personalData.twitch, icon: BsTwitch },
@@ -47,7 +52,7 @@ export default function LinksPage() {
           }}
           className="flex items-center space-x-1 px-3 py-1 bg-gray-800 rounded hover:bg-gray-700 transition"
         >
-          <AiOutlineShareAlt size={20} />
+          <AiOutlineShareAlt size={20} aria-hidden="true" />
           <span>Share</span>
         </button>
       </div>
@@ -91,7 +96,7 @@ export default function LinksPage() {
             rel="noopener noreferrer"
             className="flex items-center justify-center space-x-2 py-3 px-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition"
           >
-            <Icon size={24} />
+            <Icon size={24} aria-hidden="true" />
             <span>{name}</span>
           </Link>
         ))}
@@ -108,7 +113,7 @@ export default function LinksPage() {
               rel="noopener noreferrer"
               className="flex items-center justify-center space-x-2 py-3 px-4 bg-pink-600 rounded-lg hover:bg-pink-500 transition"
             >
-              {Icon && <Icon size={24} />}
+              {Icon && <Icon size={24} aria-hidden="true" />}
               <span>{name}</span>
             </Link>
           ))}

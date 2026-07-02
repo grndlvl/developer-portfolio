@@ -39,3 +39,25 @@ next-env.d.ts
 /.crush
 *.tsbuildinfo
 next-env.d.ts
+
+# --- Accessibility test artifacts (tests/a11y) ---
+# Accessibility test artifacts
+test-results/
+playwright-report/
+a11y-report/
+
+# Pa11y screenshots
+pa11y-screenshots/
+
+# Review output files
+a11y-pr-review.md
+a11y-release-review.md
+
+# Node modules (if local install)
+
+# Playwright state
+.playwright/
+
+# OS files
+.DS_Store
+Thumbs.db

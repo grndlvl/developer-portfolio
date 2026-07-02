@@ -1,0 +1,68 @@
+name: Accessibility Linting
+
+on:
+  pull_request:
+    paths:
+      - '**.jsx'
+      - '**.tsx'
+      - '**.js'
+      - '**.ts'
+      - '**.css'
+      - '**.scss'
+
+jobs:
+  a11y-lint:
+    name: Accessibility Linters
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: ESLint jsx-a11y
+        if: always()
+        env:
+          ESLINT_USE_FLAT_CONFIG: 'false'
+        run: |
+          npx eslint --config .eslintrc.json \
+            --no-error-on-unmatched-pattern \
+            "app/**/*.{jsx,tsx,js,ts}" "utils/**/*.{jsx,tsx,js,ts}" \
+            --max-warnings 0
+
+      - name: Stylelint a11y
+        if: always()
+        run: |
+          npx stylelint --allow-empty-input \
+            --config tests/a11y/configs/.stylelintrc.a11y.json \
+            "app/**/*.{css,scss}" "styles/**/*.{css,scss}"
+
+      - name: Claude Code PR review (best-effort)
+        if: always()
+        continue-on-error: true
+        run: |
+          if [ -n "${ANTHROPIC_API_KEY:-}" ]; then
+            bash tests/a11y/scripts/claude-a11y-review.sh --changed-files --output a11y-pr-review.md
+          else
+            echo "ANTHROPIC_API_KEY not set; skipping Claude PR review."
+          fi
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Upload PR review
+        if: always()
+        continue-on-error: true
+        uses: actions/upload-artifact@v4
+        with:
+          name: a11y-pr-review
+          path: a11y-pr-review.md
+          retention-days: 30
+          if-no-files-found: ignore

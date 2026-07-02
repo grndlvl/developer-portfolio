@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Accessibility Pre-Commit Hook
+# Delegates to lint-staged which runs accessibility linters on staged files.
+# Install: cp this file to .husky/pre-commit (or .git/hooks/pre-commit)
+#
+# lint-staged uses tests/a11y/configs/.lintstagedrc.json to determine which
+# linters run on which file types. Hard errors from any linter block the commit.
+
+# ESLint 9 defaults to flat config; this project uses the legacy .eslintrc.json
+# (via next/core-web-vitals), so opt into the eslintrc system for lint-staged.
+export ESLINT_USE_FLAT_CONFIG=false
+npx lint-staged --config tests/a11y/configs/.lintstagedrc.json

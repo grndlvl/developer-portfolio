@@ -1,0 +1,5 @@
+version: 1
+layout: tests-a11y-harness
+project_type: nextjs
+site_mode: single
+node: 22

@@ -35,8 +35,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# crush agent directory
+# agent tooling state
 /.crush
+/.omc/
 *.tsbuildinfo
 next-env.d.ts
 

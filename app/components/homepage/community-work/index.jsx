@@ -15,14 +15,20 @@ function CommunityWork() {
       <div className="overflow-hidden rounded-2xl border border-[#293052] bg-[#11152c]">
         <div className="grid lg:grid-cols-[0.75fr_1.25fr]">
           <div className="relative flex flex-col justify-between overflow-hidden bg-gradient-to-br from-violet-700/30 to-pink-600/10 p-7 sm:p-9">
-            <Image
-              src="/logos/backyard-bullies.jpg"
-              width={420}
-              height={420}
-              alt=""
+            {/* circle-masked + zoomed so the white-background logo JPEG shows
+                no white edge -- matches the /launch showcase watermark */}
+            <span
               aria-hidden="true"
-              className="pointer-events-none absolute -bottom-16 -right-16 h-80 w-80 rounded-full opacity-[0.12] grayscale"
-            />
+              className="pointer-events-none absolute -bottom-16 -right-16 h-80 w-80 overflow-hidden rounded-full opacity-[0.12] grayscale"
+            >
+              <Image
+                src="/logos/backyard-bullies.jpg"
+                width={420}
+                height={420}
+                alt=""
+                className="h-full w-full scale-[1.18] object-cover"
+              />
+            </span>
             <div className="relative z-10">
               <TbHeartHandshake
                 aria-hidden="true"

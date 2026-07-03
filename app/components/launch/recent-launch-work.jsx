@@ -53,21 +53,15 @@ function ProjectShowcase({ project, reverse }) {
             reverse ? "lg:order-2" : ""
           }`}
         >
-          {/* faint brand watermark fills the panel behind the devices; the
-              logo is circle-masked and zoomed so white-background artwork
-              (e.g. the Backyard Bullies JPEG) shows no white edge */}
-          <span
+          {/* faint brand watermark fills the panel behind the devices */}
+          <Image
+            src={project.logo}
+            alt=""
             aria-hidden="true"
-            className="pointer-events-none absolute -bottom-8 -left-8 h-56 w-56 overflow-hidden rounded-full opacity-[0.08] grayscale"
-          >
-            <Image
-              src={project.logo}
-              alt=""
-              width={project.logoWidth}
-              height={project.logoHeight}
-              className="h-full w-full scale-[1.18] object-cover"
-            />
-          </span>
+            width={project.logoWidth}
+            height={project.logoHeight}
+            className="pointer-events-none absolute -bottom-8 -left-8 h-56 w-56 rounded-full object-contain opacity-[0.08] grayscale"
+          />
           <div className="relative">
             <div className="relative pb-10 pr-10">
               <BrowserFrame

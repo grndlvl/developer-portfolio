@@ -8,6 +8,7 @@ import {
   TbDeviceMobile,
   TbBuildingSkyscraper,
   TbAccessible,
+  TbSparkles,
   TbMapPin,
 } from "react-icons/tb";
 import { BrowserFrame, PhoneFrame } from "./device-frames";
@@ -15,6 +16,7 @@ import { LaunchBadge } from "./launch-wordmark";
 
 const trustPoints = [
   { icon: TbBuildingSkyscraper, label: "Enterprise-grade engineering" },
+  { icon: TbSparkles, label: "Found by AI" },
   { icon: TbBolt, label: "Fast & lightweight" },
   { icon: TbDeviceMobile, label: "Mobile-first" },
   { icon: TbAccessible, label: "Accessible (WCAG)" },
@@ -53,8 +55,9 @@ function LaunchHero({ startHref }) {
           </h1>
           <p className="mt-6 max-w-xl text-base leading-7 text-gray-300 sm:text-lg">
             Enterprise-grade engineering, small-business scale. A fast,
-            credible, mobile-first web presence—without bloated platforms,
-            builder lock-in, or unnecessary complexity.
+            credible, mobile-first web presence that customers and AI assistants
+            can actually find—with room to grow into research, integrations, and
+            automation.
           </p>
 
           <p className="mt-4 flex items-center gap-2 text-sm text-gray-400">

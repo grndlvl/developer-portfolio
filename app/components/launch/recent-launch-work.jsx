@@ -129,6 +129,12 @@ function ProjectShowcase({ project, reverse }) {
             {project.businessType} · {project.location}
           </p>
 
+          {project.estValue && (
+            <p className="mt-4 inline-flex items-center gap-2 rounded-full border border-[#16f2b3]/30 bg-[#16f2b3]/10 px-3 py-1 text-xs font-semibold text-[#16f2b3]">
+              {project.estValue} estimated value · donated
+            </p>
+          )}
+
           <dl className="mt-6 space-y-4">
             <MetaRow label="The problem">{project.problem}</MetaRow>
             <MetaRow label="What was built">{project.built}</MetaRow>

@@ -2,7 +2,7 @@
 
 import {
   TbLayoutGrid,
-  TbMapPin,
+  TbSparkles,
   TbTargetArrow,
   TbTrendingUp,
   TbCheck,
@@ -19,7 +19,7 @@ import {
 
 const groupIcons = {
   foundation: TbLayoutGrid,
-  found: TbMapPin,
+  found: TbSparkles,
   convert: TbTargetArrow,
   grow: TbTrendingUp,
 };
@@ -48,8 +48,13 @@ function LaunchDeliverables() {
           id="what-you-get-heading"
           className="mt-3 text-3xl font-bold text-white sm:text-4xl"
         >
-          A clean, credible foundation with room to grow.
+          More than a website. A place people and AI can find.
         </h2>
+        <p className="mt-5 text-base leading-7 text-gray-300 sm:text-lg">
+          It starts as a fast, credible site with real SEO and AI-ready
+          structure—so customers and AI assistants describe your business
+          accurately—and grows into research, integrations, and automation.
+        </p>
       </div>
 
       <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">

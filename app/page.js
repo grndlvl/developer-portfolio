@@ -5,6 +5,7 @@ import CommunityWork from "./components/homepage/community-work";
 import Education from "./components/homepage/education";
 import Experience from "./components/homepage/experience";
 import HeroSection from "./components/homepage/hero-section";
+import LaunchTeaser from "./components/homepage/launch-teaser";
 import SelectedImpact from "./components/homepage/selected-impact";
 import Skills from "./components/homepage/skills";
 
@@ -15,6 +16,7 @@ export default function Home() {
       <AIExpertise />
       <SelectedImpact />
       <CommunityWork />
+      <LaunchTeaser />
       <AboutSection />
       <Experience />
       <Skills />

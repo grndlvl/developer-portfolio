@@ -1,11 +1,13 @@
 {
-  "_comment": "Single source of truth for accessibility test URLs. Read by .pa11yci.cjs, wcag-audit.spec.ts, and scripts/a11y-audit.sh. This portfolio has two user-facing routes, so 'pr' and 'full' are identical. Add entries here (not in the configs/scripts) as pages are added.",
+  "_comment": "Single source of truth for accessibility test URLs. Read by .pa11yci.cjs, wcag-audit.spec.ts, and scripts/a11y-audit.sh. Add entries here (not in the configs/scripts) as pages are added.",
   "pr": [
     { "name": "Homepage", "path": "/" },
+    { "name": "Launch", "path": "/launch" },
     { "name": "Links", "path": "/links" }
   ],
   "full": [
     { "name": "Homepage", "path": "/" },
+    { "name": "Launch", "path": "/launch" },
     { "name": "Links", "path": "/links" }
   ]
 }

@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import { MdArrowOutward } from "react-icons/md";
-import { TbRocket } from "react-icons/tb";
 import { BrowserFrame } from "../../launch/device-frames";
+import LaunchWordmark from "../../launch/launch-wordmark";
 
 function LaunchTeaser() {
   return (
@@ -20,10 +20,7 @@ function LaunchTeaser() {
 
         <div className="relative grid items-center gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12">
           <div className="max-w-xl">
-            <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.2em] text-[#16f2b3]">
-              <TbRocket aria-hidden="true" size={18} />
-              grndlvl Launch
-            </p>
+            <LaunchWordmark className="text-lg" />
             <h2
               id="launch-teaser-heading"
               className="mt-3 text-2xl font-bold text-white sm:text-3xl"

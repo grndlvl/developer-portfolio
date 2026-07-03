@@ -11,6 +11,7 @@ import {
   TbMapPin,
 } from "react-icons/tb";
 import { BrowserFrame, PhoneFrame } from "./device-frames";
+import { LaunchBadge } from "./launch-wordmark";
 
 const trustPoints = [
   { icon: TbBuildingSkyscraper, label: "Enterprise-grade engineering" },
@@ -40,9 +41,7 @@ function LaunchHero({ startHref }) {
 
       <div className="mt-6 grid grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-10">
         <div>
-          <p className="inline-flex items-center gap-2 rounded-full border border-violet-400/30 bg-violet-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-[#16f2b3]">
-            grndlvl Launch
-          </p>
+          <LaunchBadge className="text-sm" />
           <h1
             id="launch-hero-heading"
             className="mt-5 text-4xl font-extrabold leading-tight text-white sm:text-5xl lg:text-[3.4rem] lg:leading-[1.05]"

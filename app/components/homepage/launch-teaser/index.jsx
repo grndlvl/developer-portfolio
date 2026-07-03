@@ -49,8 +49,8 @@ function LaunchTeaser() {
 
           <div className="lg:pl-4">
             <BrowserFrame
-              src="/image/launch/backyard-bullies-desktop.jpeg"
-              alt="A small-business launch page built by grndlvl, shown in a browser"
+              src="/image/launch/halls-balls-desktop.jpeg"
+              alt="A branded small-business launch page built by grndlvl, shown in a browser"
               label="a grndlvl Launch project"
               width={1440}
               height={900}

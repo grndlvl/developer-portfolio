@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { MdArrowOutward } from "react-icons/md";
+import { TbRocket } from "react-icons/tb";
 
 function LaunchCta({ id, mailtoHref }) {
   return (
@@ -45,6 +46,7 @@ function LaunchCta({ id, mailtoHref }) {
               href={mailtoHref}
               className="inline-flex min-h-11 items-center gap-2 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 px-6 py-3 text-sm font-semibold text-white transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
             >
+              <TbRocket aria-hidden="true" size={18} className="-rotate-45" />
               Start a grndlvl Launch Project
               <MdArrowOutward aria-hidden="true" size={18} />
             </Link>

@@ -3,7 +3,7 @@
 import { usePathname } from 'next/navigation';
 import Link from "next/link";
 import { useState } from "react";
-import { TbMenu2, TbX } from "react-icons/tb";
+import { TbMenu2, TbX, TbRocket } from "react-icons/tb";
 
 const navLinks = [
   { href: "/#ai-expertise", label: "AI Expertise" },
@@ -12,7 +12,7 @@ const navLinks = [
   { href: "/#experience", label: "Experience" },
   { href: "/#skills", label: "Skills" },
   { href: "/#education", label: "Education" },
-  { href: "/launch", label: "Launch" },
+  { href: "/launch", label: "Launch", icon: TbRocket },
   { href: "/links", label: "Links" },
 ];
 
@@ -37,12 +37,19 @@ function Navbar() {
         </div>
 
         <ul className="hidden lg:flex lg:items-center lg:space-x-1">
-          {navLinks.map(({ href, label }) => (
+          {navLinks.map(({ href, label, icon: Icon }) => (
             <li key={href}>
               <Link
                 href={href}
-                className="block whitespace-nowrap px-3 py-3 text-sm uppercase text-white no-underline transition-colors duration-300 hover:text-pink-500 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                className="flex items-center gap-1.5 whitespace-nowrap px-3 py-3 text-sm uppercase text-white no-underline transition-colors duration-300 hover:text-pink-500 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
+                {Icon && (
+                  <Icon
+                    aria-hidden="true"
+                    size={15}
+                    className="-rotate-45 text-[#16f2b3]"
+                  />
+                )}
                 {label}
               </Link>
             </li>
@@ -70,13 +77,20 @@ function Navbar() {
           id="mobile-menu"
           className="absolute left-0 right-0 top-full z-50 flex flex-col gap-1 rounded-2xl border border-[#293052] bg-[#0d1224]/95 p-3 shadow-2xl shadow-black/40 backdrop-blur lg:hidden"
         >
-          {navLinks.map(({ href, label }) => (
+          {navLinks.map(({ href, label, icon: Icon }) => (
             <li key={href}>
               <Link
                 href={href}
                 onClick={() => setOpen(false)}
-                className="block rounded-lg px-4 py-3 text-sm uppercase text-white no-underline transition-colors hover:bg-white/5 hover:text-pink-500 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                className="flex items-center gap-2 rounded-lg px-4 py-3 text-sm uppercase text-white no-underline transition-colors hover:bg-white/5 hover:text-pink-500 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
+                {Icon && (
+                  <Icon
+                    aria-hidden="true"
+                    size={16}
+                    className="-rotate-45 text-[#16f2b3]"
+                  />
+                )}
                 {label}
               </Link>
             </li>

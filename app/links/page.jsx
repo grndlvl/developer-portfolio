@@ -74,11 +74,16 @@ export default function LinksPage() {
         className="rounded-full"
         priority
       />
-      <h1 className="text-[#16f2b3] text-4xl font-bold text-center">
-        <Link
-          href="/"
-          className=" text-[#16f2b3] text-3xl font-bold">
-          {personalData.devUsername}
+      <h1 className="text-center">
+        <Link href="/" className="inline-block">
+          <Image
+            src="/brand/wordmark.png"
+            alt="grndlvl"
+            width={1680}
+            height={420}
+            priority
+            className="mx-auto h-11 w-auto sm:h-12"
+          />
         </Link>
       </h1>
       <h2 className="text-xl text-center text-gray-400">{personalData.name}</h2>

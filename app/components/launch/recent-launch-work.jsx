@@ -49,39 +49,77 @@ function ProjectShowcase({ project, reverse }) {
       <div className="grid lg:grid-cols-2">
         {/* Visual */}
         <div
-          className={`relative bg-gradient-to-br from-violet-700/25 to-pink-600/10 p-7 sm:p-10 lg:p-12 ${
+          className={`relative flex flex-col justify-center overflow-hidden bg-gradient-to-br from-violet-700/25 to-pink-600/10 p-7 sm:p-10 lg:p-12 ${
             reverse ? "lg:order-2" : ""
           }`}
         >
-          <div className="relative pb-10 pr-10">
-            <BrowserFrame
-              src={project.desktopShot}
-              alt={`The ${project.name} launch page shown on desktop`}
-              label={project.siteLabel}
-              width={1440}
-              height={900}
+          {/* faint brand watermark fills the panel behind the devices; the
+              logo is circle-masked and zoomed so white-background artwork
+              (e.g. the Backyard Bullies JPEG) shows no white edge */}
+          <span
+            aria-hidden="true"
+            className="pointer-events-none absolute -bottom-8 -left-8 h-56 w-56 overflow-hidden rounded-full opacity-[0.08] grayscale"
+          >
+            <Image
+              src={project.logo}
+              alt=""
+              width={project.logoWidth}
+              height={project.logoHeight}
+              className="h-full w-full scale-[1.18] object-cover"
             />
-            <PhoneFrame
-              src={project.mobileShot}
-              alt={`The ${project.name} launch page shown on a phone`}
-              width={390}
-              height={844}
-              className="absolute bottom-0 right-0 w-24 sm:w-28"
-            />
+          </span>
+          <div className="relative">
+            <div className="relative pb-10 pr-10">
+              <BrowserFrame
+                src={project.desktopShot}
+                alt={`The ${project.name} launch page shown on desktop`}
+                label={project.siteLabel}
+                width={1440}
+                height={900}
+              />
+              <PhoneFrame
+                src={project.mobileShot}
+                alt={`The ${project.name} launch page shown on a phone`}
+                width={390}
+                height={844}
+                className="absolute bottom-0 right-0 w-24 sm:w-28"
+              />
+            </div>
+            <p className="relative mt-5 flex items-center gap-2 text-xs font-medium text-gray-300">
+              {project.href ? (
+                <>
+                  <span
+                    aria-hidden="true"
+                    className="h-2 w-2 rounded-full bg-green-400 shadow-[0_0_8px_rgba(74,222,128,0.9)]"
+                  />
+                  Live · {project.siteLabel}
+                </>
+              ) : (
+                <>
+                  <span
+                    aria-hidden="true"
+                    className="h-2 w-2 rounded-full bg-amber-400"
+                  />
+                  Pilot build · {project.siteLabel}
+                </>
+              )}
+            </p>
           </div>
         </div>
 
         {/* Copy */}
         <div className="p-7 sm:p-10">
           <div className="flex items-center gap-4">
-            <Image
-              src={project.logo}
-              alt=""
-              aria-hidden="true"
-              width={project.logoWidth}
-              height={project.logoHeight}
-              className="h-12 w-12 flex-shrink-0 rounded-full object-cover ring-1 ring-[#293052]"
-            />
+            <span className="relative h-12 w-12 flex-shrink-0 overflow-hidden rounded-full ring-1 ring-[#293052]">
+              <Image
+                src={project.logo}
+                alt=""
+                aria-hidden="true"
+                width={project.logoWidth}
+                height={project.logoHeight}
+                className="h-full w-full scale-[1.18] object-cover"
+              />
+            </span>
             <div>
               <p className="text-xs font-semibold uppercase tracking-wider text-pink-400">
                 {project.label}

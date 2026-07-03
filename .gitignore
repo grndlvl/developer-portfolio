@@ -62,3 +62,6 @@ a11y-release-review.md
 # OS files
 .DS_Store
 Thumbs.db
+
+# Playwright MCP scratch output
+.playwright-mcp/

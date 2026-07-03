@@ -1,0 +1,33 @@
+# Jonathan DeLaigle — grndlvl
+
+> Jonathan DeLaigle (online: grndlvl) is an applied AI architect, CTO, and software engineer with 18+ years of experience. He designs agentic AI systems, integrates AI into real business workflows, and ships production software. He also runs grndlvl Launch, a focused service building fast, accessible, mobile-first launch pages for small businesses.
+
+## About
+- [Home / portfolio](https://www.grndlvl.com/): Applied AI architecture, agentic systems, workflow integration, and production engineering.
+- Currently CTO at Zivtech, leading a company-wide AI-first practice.
+- 18+ years delivering for organizations including Children's Hospital of Philadelphia, Johns Hopkins, Merck, LSAC, GroScale, and NCLC.
+
+## Services
+- [grndlvl Launch](https://www.grndlvl.com/launch): Enterprise-grade engineering at small-business scale — fast, accessible, mobile-first launch pages for local businesses, clubs, and community organizations in Augusta, the CSRA, and remotely. Flexible pilot pricing, with room to grow into booking, payments, CRM, and automation.
+- AI & product consulting: agentic systems, AI workflow automation, human-in-the-loop systems, and early-stage technical direction.
+
+## Expertise
+- Applied AI: agentic system design, multi-agent orchestration, workflow integration, and production guardrails (observability, evaluation, permissions, human-in-the-loop).
+- Engineering: full-stack (Next.js, React), Drupal, APIs and integrations, DevOps, and high-scale platforms.
+- Accessibility: WCAG 2.2 AA, with automated and agent-assisted testing.
+
+## Selected work
+- AI-assisted accessibility assurance harness (Zivtech, applied on the NCLC platform).
+- Zivtech company-wide AI-first practice (research, engineering, review, QA, docs).
+- GroScale — high-throughput shipping platform scaled from 10,000 to 500,000+ packages/month.
+- NCLC Digital Library — Drupal 7 to Drupal 10 modernization with a React reader and Solr search.
+- Backyard Bullies Wrestling Club — community launch build ([site](https://www.backyardbullies-wc.com/)).
+- Hall's Balls & Exotics — pilot launch build.
+
+## Contact
+- Email: jonathan@grndlvl.com
+- Phone: +1 803-599-6443
+- [LinkedIn](https://www.linkedin.com/in/delaigle)
+- [GitHub](https://github.com/grndlvl)
+- [Schedule a call](https://calendly.com/grndlvl)
+- [All links](https://www.grndlvl.com/links)

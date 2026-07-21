@@ -98,14 +98,14 @@ def build_logo(filename, *, stacked, ink, background=None, full_color=False):
 
 def build_sponsor_mark(filename, ink):
     """Build the compact one-color mark intended for apparel and sponsor grids."""
-    width, height = 420, 120
+    width, height = 482, 120
     word = outlined_text("grndlvl", 72, ink, 0, 70, 12, "word")
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-labelledby="title desc">
   <title id="title">grndlvl</title>
   <desc id="desc">A compact, printer-safe grndlvl sponsor mark with outlined lettering.</desc>
   <path d="M24 36 L48 60 L24 84" fill="none" stroke="{ink}" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
   {word}
-  <rect x="380" y="32" width="20" height="52" rx="2" fill="{ink}"/>
+  <rect x="436" y="32" width="26" height="56" rx="2" fill="{ink}"/>
 </svg>
 '''
     (BRAND_DIR / filename).write_text(svg)
@@ -113,7 +113,7 @@ def build_sponsor_mark(filename, ink):
 
 def build_color_sponsor_mark(filename, background=None):
     """Build the compact sponsor mark in the primary brand colors."""
-    width, height = 420, 120
+    width, height = 482, 120
     word = outlined_text("grndlvl", 72, "#16f2b3", 0, 70, 12, "word")
     background_rect = (
         f'  <rect width="{width}" height="{height}" fill="{background}"/>\n'
@@ -125,7 +125,7 @@ def build_color_sponsor_mark(filename, background=None):
   <desc id="desc">A compact, full-color grndlvl sponsor mark with outlined lettering.</desc>
 {background_rect}  <path d="M24 36 L48 60 L24 84" fill="none" stroke="#ec4899" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
   {word}
-  <rect x="380" y="32" width="20" height="52" rx="2" fill="#16f2b3"/>
+  <rect x="436" y="32" width="26" height="56" rx="2" fill="#16f2b3"/>
 </svg>
 '''
     (BRAND_DIR / filename).write_text(svg)

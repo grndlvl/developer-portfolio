@@ -147,7 +147,7 @@ export default function BrandPage() {
                 <Image
                   src={mark.src}
                   alt={`${mark.name} on its recommended background`}
-                  width={420}
+                  width={482}
                   height={120}
                   className="h-auto w-full max-w-[25rem]"
                 />

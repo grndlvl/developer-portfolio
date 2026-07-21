@@ -13,6 +13,7 @@ const navLinks = [
   { href: "/#skills", label: "Skills" },
   { href: "/#education", label: "Education" },
   { href: "/launch", label: "Launch", icon: TbRocket },
+  { href: "/brand", label: "Brand" },
   { href: "/links", label: "Links" },
 ];
 
@@ -41,6 +42,7 @@ function Navbar() {
             <li key={href}>
               <Link
                 href={href}
+                aria-current={pathname === href ? "page" : undefined}
                 className="flex items-center gap-1.5 whitespace-nowrap px-3 py-3 text-sm uppercase text-white no-underline transition-colors duration-300 hover:text-pink-500 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
                 {Icon && (
@@ -81,6 +83,7 @@ function Navbar() {
             <li key={href}>
               <Link
                 href={href}
+                aria-current={pathname === href ? "page" : undefined}
                 onClick={() => setOpen(false)}
                 className="flex items-center gap-2 rounded-lg px-4 py-3 text-sm uppercase text-white no-underline transition-colors hover:bg-white/5 hover:text-pink-500 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >

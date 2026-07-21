@@ -21,5 +21,11 @@ export default function sitemap() {
       changeFrequency: "yearly",
       priority: 0.5,
     },
+    {
+      url: `${siteUrl}/brand`,
+      lastModified,
+      changeFrequency: "yearly",
+      priority: 0.5,
+    },
   ];
 }

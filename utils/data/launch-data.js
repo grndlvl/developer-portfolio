@@ -192,32 +192,6 @@ export const launchProjects = [
     footnote:
       "Completed as a community project with significant estimated professional value. Community and pilot builds are considered selectively, not on request.",
   },
-  {
-    name: "Hall's Balls & Exotics",
-    label: "Pilot launch project",
-    businessType: "Exotic pet & reptile emporium",
-    location: "Martinez, Georgia · CSRA",
-    logo: "/logos/halls-balls.png",
-    logoWidth: 260,
-    logoHeight: 266,
-    desktopShot: "/image/launch/halls-balls-desktop.jpeg",
-    mobileShot: "/image/launch/halls-balls-mobile.jpeg",
-    siteLabel: "Hall's Balls & Exotics",
-    problem:
-      "A distinctive local business relying on social posts alone, with no credible, branded home online.",
-    built:
-      "A custom branded launch page built around a bold visual identity, clear business sections, and a focused one-page structure with direct calls to visit and get in touch.",
-    matters:
-      "A professional presence that matches the brand and gives customers a clear, direct way to find and reach the shop.",
-    tags: ["Brand-led design", "The Menagerie", "Care guides", "Visit CTAs"],
-    aiWork: [
-      "AI-ready metadata—structured business data so search engines and AI assistants surface accurate info.",
-      "Presence research—AI-assisted review of existing listings to keep details consistent everywhere.",
-    ],
-    href: null,
-    linkLabel: null,
-    footnote: null,
-  },
 ];
 
 export const launchProcess = [

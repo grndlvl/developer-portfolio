@@ -34,6 +34,10 @@ function Navbar() {
             aria-label="grndlvl — home"
             className="font-mono text-2xl font-bold tracking-tight text-[#16f2b3] sm:text-3xl">
             <span aria-hidden="true" className="text-pink-500">▸ </span>grndlvl
+            <span
+              aria-hidden="true"
+              className="ml-[0.12em] inline-block h-[0.72em] w-[0.28em] rounded-[0.05em] bg-[#16f2b3] align-baseline"
+            />
           </Link>
         </div>
 

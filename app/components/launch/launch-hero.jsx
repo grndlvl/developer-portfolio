@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { MdArrowOutward } from "react-icons/md";
 import {
-  TbArrowLeft,
   TbBolt,
   TbDeviceMobile,
   TbBuildingSkyscraper,
@@ -33,15 +32,7 @@ function LaunchHero({ startHref }) {
         className="absolute -top-10 right-0 -z-10 h-72 w-72 rounded-full bg-violet-600/15 blur-3xl"
       />
 
-      <Link
-        href="/"
-        className="inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-gray-400 transition-colors duration-200 hover:text-[#16f2b3] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
-      >
-        <TbArrowLeft aria-hidden="true" size={18} />
-        Back to grndlvl
-      </Link>
-
-      <div className="mt-6 grid grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-10">
+      <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-10">
         <div>
           <LaunchBadge className="text-sm" />
           <h1

@@ -61,7 +61,7 @@ The longer `sponsor-lockup-*.svg` files are for headers, presentations, email si
 | --- | --- | --- |
 | Navy | `#0d1224` | Dark background and dark one-color mark |
 | Green | `#16f2b3` | Primary wordmark |
-| Pink | `#ec4899` | Prompt mark |
+| Pink | `#ec4899` | Prompt mark — the caret is pink in every format, including the favicon and app icon |
 | Slate | `#cbd5e1` | Descriptor text |
 | White | `#ffffff` | One-color mark on dark apparel |
 | Black | `#000000` | One-color mark on light apparel |

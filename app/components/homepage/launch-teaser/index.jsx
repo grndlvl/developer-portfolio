@@ -49,9 +49,9 @@ function LaunchTeaser() {
 
           <div className="lg:pl-4">
             <BrowserFrame
-              src="/image/launch/backyard-bullies-desktop.jpeg"
-              alt="A branded small-business launch page built by grndlvl, shown in a browser"
-              label="a grndlvl Launch project"
+              src="/image/launch/fagliers-desktop.jpeg"
+              alt="The Faglier's Mixed Martial Arts launch page shown on desktop"
+              label="fagliersmma.com"
               width={1440}
               height={900}
             />

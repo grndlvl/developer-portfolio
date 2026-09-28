@@ -1,8 +1,8 @@
 // Content model for the grndlvl Launch service page (/launch) and the
-// homepage teaser. Keep prose here using "--" instead of em dashes; numeric
-// ranges use en dashes (e.g. $1,500–$2,500) by convention.
+// homepage teaser. Use em dashes in prose; numeric ranges use en dashes
+// (e.g. $1,500–$2,500) by convention.
 
-// Who it is for -- iconKey resolves to a react-icons component in the
+// Who it is for—iconKey resolves to a react-icons component in the
 // component layer (icons can't live in a plain data module cleanly).
 export const launchAudience = [
   { label: "Local businesses & trades", iconKey: "tools" },
@@ -13,7 +13,7 @@ export const launchAudience = [
   { label: "Side businesses going pro", iconKey: "trending" },
 ];
 
-// The "not generic web design" contrast -- rendered as two side-by-side cards.
+// The "not generic web design" contrast—rendered as two side-by-side cards.
 export const launchContrast = {
   usual: {
     label: "The usual small-business site",
@@ -39,7 +39,7 @@ export const launchContrast = {
   },
 };
 
-// What you get -- the deliverables grouped into scannable buckets.
+// What you get—the deliverables grouped into scannable buckets.
 export const launchDeliverableGroups = [
   {
     iconKey: "foundation",
@@ -191,6 +191,74 @@ export const launchProjects = [
     linkLabel: "Visit the live site",
     footnote:
       "Completed as a community project with significant estimated professional value. Community and pilot builds are considered selectively, not on request.",
+  },
+  {
+    name: "Faglier's Mixed Martial Arts",
+    label: "Local business · Launch build",
+    businessType: "Family-run mixed martial arts gym",
+    location: "Augusta, Georgia · CSRA",
+    logo: "/logos/fagliers.jpg",
+    logoWidth: 958,
+    logoHeight: 960,
+    desktopShot: "/image/launch/fagliers-desktop.jpeg",
+    mobileShot: "/image/launch/fagliers-mobile.jpeg",
+    siteLabel: "fagliersmma.com",
+    problem:
+      "A respected family-run gym with decades of history but no active official website. Programs, schedules, pricing, coaches, and events were spread across social channels and older listings.",
+    built:
+      "A fast, accessible, mobile-first site that brings the gym's programs, schedule, pricing, coaching lineage, events, photos, and 3-class trial offer into one clear experience.",
+    matters:
+      "Prospective students can understand what the gym teaches, who it serves, and how to start, while the family has a credible home for current information and fight-community updates.",
+    tags: [
+      "Programs & pricing",
+      "Class schedule",
+      "Events",
+      "Local SEO",
+      "Trial-class CTA",
+    ],
+    aiWork: [
+      "Research synthesis—reconciling public sources and gym-provided details into one accurate business profile.",
+      "Content architecture—organizing a deep martial-arts offering into clear paths for kids, adults, beginners, and fighters.",
+      "Event publishing—turning fight announcements and community updates into structured, discoverable site content.",
+      "AI-ready metadata—structured data and a dedicated AI-readable summary so assistants can describe the gym accurately.",
+    ],
+    href: "https://fagliersmma.com/",
+    linkLabel: "Visit the live site",
+  },
+  {
+    name: "Flutterby Studio",
+    label: "Local business · Launch build",
+    businessType: "Portrait and family photographer",
+    location: "Grovetown, Georgia · CSRA",
+    logo: "/logos/flutterby-studio.webp",
+    logoWidth: 400,
+    logoHeight: 400,
+    desktopShot: "/image/launch/flutterby-studio-desktop.jpeg",
+    mobileShot: "/image/launch/flutterby-studio-mobile.jpeg",
+    siteLabel: "flutterbystudioga.com",
+    problem:
+      "A photographer with seven years of experience needed an owned home that could carry the warmth of her work beyond social media while making session choices, pricing, policies, and next steps easy to understand.",
+    built:
+      "An art-led, mobile-first photography site and custom logo system, with Amber's story, an immersive portfolio, testimonials, session packages, FAQs, social paths, and a direct inquiry form.",
+    matters:
+      "Prospective clients can recognize Amber's style, understand what a session costs and feels like, and move from inspiration to a conversation without piecing details together across social channels.",
+    tags: [
+      "Photography portfolio",
+      "Sessions & pricing",
+      "Testimonials",
+      "FAQs",
+      "Inquiry form",
+      "Logo development",
+    ],
+    aiWork: [
+      "Research synthesis—turning Amber's story, services, policies, and social proof into a clear client journey.",
+      "Content architecture—pairing a visual portfolio with pricing, process, FAQs, and a focused inquiry path.",
+      "Brand voice development—shaping warm, confidence-building copy around Amber's perspective and client experience.",
+      "Logo development—creating a botanical wordmark and butterfly-flower mark that carry the studio's visual identity across the site.",
+      "AI-ready metadata—LocalBusiness, service, and FAQ structured data so search engines and assistants can understand the studio.",
+    ],
+    href: "https://flutterbystudioga.com/",
+    linkLabel: "Visit the live site",
   },
 ];
 

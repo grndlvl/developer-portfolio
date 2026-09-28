@@ -22,6 +22,8 @@
 - GroScale — high-throughput shipping platform scaled from 10,000 to 500,000+ packages/month.
 - NCLC Digital Library — Drupal 7 to Drupal 10 modernization with a React reader and Solr search.
 - Backyard Bullies Wrestling Club — community launch build ([site](https://www.backyardbullies-wc.com/)).
+- Faglier's Mixed Martial Arts — local-business launch build ([site](https://fagliersmma.com/)).
+- Flutterby Studio — portrait-photography launch build with logo development ([site](https://flutterbystudioga.com/)).
 - Hall's Balls & Exotics — pilot launch build.
 
 ## Contact

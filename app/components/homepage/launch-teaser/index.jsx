@@ -49,9 +49,9 @@ function LaunchTeaser() {
 
           <div className="lg:pl-4">
             <BrowserFrame
-              src="/image/launch/fagliers-desktop.jpeg"
-              alt="The Faglier's Mixed Martial Arts launch page shown on desktop"
-              label="fagliersmma.com"
+              src="/image/launch/flutterby-studio-desktop.jpeg"
+              alt="The Flutterby Studio photography launch page shown on desktop"
+              label="flutterbystudioga.com"
               width={1440}
               height={900}
             />

@@ -34,7 +34,7 @@ export function BrowserFrame({ src, alt, label, width, height, priority = false,
   );
 }
 
-// Phone bezel that frames a mobile screenshot -- pairs with BrowserFrame to
+// Phone bezel that frames a mobile screenshot—pairs with BrowserFrame to
 // show the same site responsive across devices.
 export function PhoneFrame({ src, alt, width, height, className = "" }) {
   return (

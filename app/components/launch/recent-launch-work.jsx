@@ -18,7 +18,7 @@ function MetaRow({ label, children }) {
   );
 }
 
-// The grndlvl AI throughline -- what a Launch page connects to beyond the page
+// The grndlvl AI throughline—what a Launch page connects to beyond the page
 // itself. Violet accent matches the homepage AI Expertise section.
 function AiWork({ items }) {
   return (

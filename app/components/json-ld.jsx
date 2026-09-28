@@ -1,7 +1,7 @@
 // @flow strict
 
 // Renders a schema.org JSON-LD <script> for AI/search engines. Server
-// component -- safe to place in the layout or any page's tree.
+// component—safe to place in the layout or any page's tree.
 function JsonLd({ data }) {
   return (
     <script
